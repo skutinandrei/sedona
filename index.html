@@ -11,20 +11,20 @@
         <header class="main-header">
             <nav class="main-navigation">
                 <ul class="site-navigation">
-                    <li><a class="main-header-logo"><img src="img/main-logo.png" alt="Логотип города Седона" width="138" height="70"></a></li>
                     <li><a href="info.html">Информация</a></li>
                     <li><a href="photo.html">Фото и видео</a></li>
+                    <li><a class="main-header-logo"><img src="img/main-logo.png" alt="Логотип города Седона" width="138" height="70"></a></li>
                     <li><a href="map.html">Карта штата</a></li>
                     <li><a href="hotels.html">Гостиницы</a></li>
                 </ul>
             </nav>
         </header>
         
-        <main class="container">
+        <main class="index-container">
 
             <h1 class="visually-hidden">Город Седона</h1>
 
-            <img src="img/welcome-to-sedona.png" alt="Welcome to Sedona" width="458" height="352">
+            <img class="welcome-img" src="img/welcome-to-sedona.png" alt="Welcome to Sedona" width="458" height="352">
 
             <div class="reasons-promo">
                 <b>Седона - небольшой городок в Аризоне, заслуживающий большего!</b>
@@ -34,9 +34,11 @@
             <section class="reasons">
                 <h2 class="visually-hidden">Преимущества</h2>
                 <div class="reason-open">
-                    <h3>Настоящий городок</h3>
-                    <span>&mdash; №1 &mdash;</span>
-                    <p>Седона &mdash; не аттрацион для туристов, там течет своя жизнь!</p>
+                    <div class="reason-open-wrapper">
+                        <h3>Настоящий городок</h3>
+                        <span>&mdash; №1 &mdash;</span>
+                        <p>Седона &mdash; не аттрацион для туристов, там течет своя жизнь!</p>
+                    </div>    
                     <img src="img/city-photo.jpg" alt="фото города Седона" width="800" height="256">
                 </div>
                 <ul class="feature-list">
@@ -54,10 +56,12 @@
                     </li>
                 </ul>
                 <div class="reason-open">
-                    <h3>Там есть мост дьявола</h3>
-                    <span>&mdash; №2 &mdash;</span>
-                    <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                     <img src="img/bridge-photo.jpg" alt="фото моста дьявола" width="800" height="256">
+                    <div class="reason-open-wrapper">
+                        <h3>Там есть мост дьявола</h3>
+                        <span>&mdash; №2 &mdash;</span>
+                        <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
+                    </div>                    
                 </div>
                 <ul class="reasons-list">
                     <li class="reason-item">
@@ -124,7 +128,7 @@
             </div>
             <div class="footer-copyright">
                 <p>Website by</p>
-                <a class="button" href="https://htmlacademy.ru"><img src="img/htmlacademy-logo.png" alt="Логотип HTML Academy"></a>
+                <a class="copyright-logo" href="https://htmlacademy.ru">HTML Academy</a>
             </div>
         </footer>
     </body>
