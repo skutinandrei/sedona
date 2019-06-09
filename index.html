@@ -10,10 +10,10 @@
     <body class="index">
         <header class="main-header">
             <nav class="main-navigation">
+                <a class="main-header-logo"><img src="img/main-logo.png" alt="Логотип города Седона" width="138" height="70"></a>
                 <ul class="site-navigation">
                     <li><a href="info.html">Информация</a></li>
                     <li><a href="photo.html">Фото и видео</a></li>
-                    <li><a class="main-header-logo"><img src="img/main-logo.png" alt="Логотип города Седона" width="138" height="70"></a></li>
                     <li><a href="map.html">Карта штата</a></li>
                     <li><a href="hotels.html">Гостиницы</a></li>
                 </ul>
@@ -23,9 +23,11 @@
         <main class="index-container">
 
             <h1 class="visually-hidden">Город Седона</h1>
-
-            <img class="welcome-img" src="img/welcome-to-sedona.png" alt="Welcome to Sedona" width="458" height="352">
-
+            
+            <div class="welcome-img-wrapper">
+                <img class="welcome-img" src="img/welcome-to-sedona.png" alt="Welcome to Sedona">
+            </div>
+        
             <div class="reasons-promo">
                 <b>Седона - небольшой городок в Аризоне, заслуживающий большего!</b>
                 <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
@@ -35,30 +37,30 @@
                 <h2 class="visually-hidden">Преимущества</h2>
                 <div class="reason-open">
                     <div class="reason-open-wrapper">
-                        <h3>Настоящий городок</h3>
+                        <h3>Настоящий <br>городок</h3>
                         <span>&mdash; №1 &mdash;</span>
                         <p>Седона &mdash; не аттрацион для туристов, там течет своя жизнь!</p>
                     </div>    
-                    <img src="img/city-photo.jpg" alt="фото города Седона" width="800" height="256">
+                    <img src="img/bridge-photo.jpg" alt="фото города Седона" width="800" height="256">
                 </div>
                 <ul class="feature-list">
-                    <li class="feature-item">
+                    <li class="feature-item house">
                         <b>Жилье</b>
                         <p>Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
                     </li>
-                    <li class="feature-item">
+                    <li class="feature-item food">
                         <b>Еда</b>
                         <p>Всегда заказывайте фирменный бургер, вы не разочаруетесь!</p>
                     </li>
-                    <li class="feature-item">
+                    <li class="feature-item souviner">
                         <b>Сувениры</b>
                         <p>Не только китайского, но и местного производства!</p>
                     </li>
                 </ul>
                 <div class="reason-open">
-                    <img src="img/bridge-photo.jpg" alt="фото моста дьявола" width="800" height="256">
+                    <img src="img/city-photo.jpg" alt="фото моста дьявола" width="800" height="256">
                     <div class="reason-open-wrapper">
-                        <h3>Там есть мост дьявола</h3>
+                        <h3>Там есть <br>мост дьявола</h3>
                         <span>&mdash; №2 &mdash;</span>
                         <p>Да, по нему можно пройти! Если конечно вы осмелитесь</p>
                     </div>                    
@@ -84,35 +86,38 @@
 
             <div class="search-promo">
                 <b>Заинтересовались?</b>
-                <p>Укажите предполагаемые даты поездки,<br>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+                <p>Укажите предполагаемые даты поездки,</p>
+                <p>и мы покажем Вам лучшие предложения гостиниц в Седоне</p>
+                <button class="button open-search-button">Поиск гостиницы в Седоне</button>
             </div>
 
             <section class="hotel-search">
 
                 <h2 class="visually-hidden">Поиск гостиницы</h2>
-
-                <button class="button open-search-button">Поиск гостиницы в Седоне</button>
-                <img src="img/map.png" alt="Местоположение города Седона на карте" width="1200" height="593">
-                <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
-                    <p class="hotel-search-item">
-                        <label for="date-arrival">Дата заезда:</label>
-                        <input id="date-arrival" type="text" name="date-arrival" value="" placeholder="24 апреля 2019">
-                    </p>
-                    <p class="hotel-search-item">
+                <div class="hotel-search-form-wrapper">
+                    <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
+                        <p class="hotel-search-item">
+                            <label for="date-arrival">Дата заезда:</label>
+                            <input id="date-arrival" type="text" name="date-arrival" value="24 апреля 2019">
+                        </p>
+                        <p class="hotel-search-item">
                             <label for="date-departure">Дата выезда:</label>
-                            <input id="date-departure" type="text" name="date-departure" value="" placeholder="4 июля 2019">
-                    </p>
-                    <p class="hotel-search-item">
-                        <label for="adults">Взрослые:</label>
-                        <input id="adults" type="number" name="adults" value="" placeholder="2">
-                    </p>
-                    <p class="hotel-search-item">
-                        <label for="children">Дети:</label>
-                        <input id="children" type="number" name="children" value="" placeholder="0">
-                    </p>
-                    <button class="button search-button" type="submit">Найти</button>
-                </form>
-
+                            <input id="date-departure" type="text" name="date-departure" value="4 июля 2019">
+                        </p>
+                        <div class="hotel-search-item person-count">
+                            <p class="adults">
+                                <label for="adults">Взрослые:</label>
+                                <input id="adults" type="number" name="adults" value="2">
+                            </p>                            
+                            <p class="children">
+                                <label for="children">Дети:</label>
+                                <input id="children" type="number" name="children" value="0">
+                            </p>
+                        </div>
+                        <button class="button search-button" type="submit">Найти</button>
+                    </form>
+                </div>        
+                <img src="img/map.png" alt="Местоположение города Седона на карте" width="1200" height="593">     
             </section>
 
         </main>
