@@ -7,7 +7,7 @@
         <link href="css/normalize.css" rel="stylesheet">
         <link href="css/style.css" rel="stylesheet">
     </head>
-    <body class="index">
+    <body>
         <header class="main-header">
             <nav class="main-navigation">
                 <a class="main-header-logo"><img src="img/main-logo.png" alt="Логотип города Седона" width="138" height="70"></a>
@@ -19,17 +19,16 @@
                 </ul>
             </nav>
         </header>
-        
         <main class="index-container">
 
             <h1 class="visually-hidden">Город Седона</h1>
             
             <div class="welcome-img-wrapper">
-                <img class="welcome-img" src="img/welcome-to-sedona.png" alt="Welcome to Sedona">
+                <img class="welcome-img" src="img/welcome-to-sedona.png" alt="Добро пожаловать в Седону" width="458" height="352">
             </div>
         
             <div class="reasons-promo">
-                <b>Седона - небольшой городок в Аризоне, заслуживающий большего!</b>
+                <b>Седона &mdash; небольшой городок в Аризоне, заслуживающий большего!</b>
                 <p>Рассмотрим 5 причин, по которым Седона круче, чем Гранд каньон!</p>
             </div>
 
@@ -39,7 +38,7 @@
                     <div class="reason-open-wrapper">
                         <h3>Настоящий <br>городок</h3>
                         <span>&mdash; №1 &mdash;</span>
-                        <p>Седона &mdash; не аттрацион для туристов, там течет своя жизнь!</p>
+                        <p>Седона &mdash; не аттракцион для туристов, там течет своя жизнь!</p>
                     </div>    
                     <img src="img/bridge-photo.jpg" alt="фото города Седона" width="800" height="256">
                 </div>
@@ -92,49 +91,76 @@
             </div>
 
             <section class="hotel-search">
-
                 <h2 class="visually-hidden">Поиск гостиницы</h2>
-                <div class="hotel-search-form-wrapper">
                     <form class="hotel-search-form" action="https://echo.htmlacademy.ru" method="post">
-                        <p class="hotel-search-item">
+                        <div class="hotel-search-item date">
                             <label for="date-arrival">Дата заезда:</label>
-                            <input id="date-arrival" type="text" name="date-arrival" value="24 апреля 2019">
-                        </p>
-                        <p class="hotel-search-item">
+                            <input id="date-arrival" type="text" name="date-arrival" value="" placeholder="24 апреля 2019">
+                            <button class="button-calendar" type="button"></button>
+                        </div>
+                        <div class="hotel-search-item date">
                             <label for="date-departure">Дата выезда:</label>
-                            <input id="date-departure" type="text" name="date-departure" value="4 июля 2019">
-                        </p>
+                            <input id="date-departure" type="text" name="date-departure" value="" placeholder="4 июля 2019">
+                            <button class="button-calendar" type="button"></button>
+                        </div>
                         <div class="hotel-search-item person-count">
-                            <p class="adults">
+                            <div class="adults">
                                 <label for="adults">Взрослые:</label>
-                                <input id="adults" type="number" name="adults" value="2">
-                            </p>                            
-                            <p class="children">
+                                <div class="person-count-input-wrapper">
+                                    <button class="button-minus" type="button"></button>
+                                    <input id="adults" type="number" name="adults" value="2">
+                                    <button class="button-plus" type="button"></button>
+                                </div>                                
+                            </div>                            
+                            <div class="children">
                                 <label for="children">Дети:</label>
-                                <input id="children" type="number" name="children" value="0">
-                            </p>
+                                <div class="person-count-input-wrapper">
+                                    <button class="button-minus" type="button"></button>
+                                    <input id="children" type="number" name="children" value="0">
+                                    <button class="button-plus" type="button"></button>
+                                </div>
+                            </div>
                         </div>
                         <button class="button search-button" type="submit">Найти</button>
                     </form>
-                </div>        
-                <img src="img/map.png" alt="Местоположение города Седона на карте" width="1200" height="593">     
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d458237.7775502964!2d-111.93447946765971!3d34.87335139546751!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1561492927951!5m2!1sru!2sru" width="1200" height="593" frameborder="0" style="border:0" allowfullscreen></iframe>     
             </section>
-
         </main>
-        
-        <footer class="main-footer">
+        <footer class="main-footer index">
             <b class="hashtag">#Visitsedona</b>
             <div class="footer-social">
                 <ul class="social-list">
-                    <li><a class="social-button" href="#">Twitter</a></li>
-                    <li><a class="social-button" href="#">Facebook</a></li>
-                    <li><a class="social-button" href="#">Youtube</a></li>
+                    <li>
+                        <a class="social-button" href="#">
+                            <span class="visually-hidden">Twitter</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="15" viewBox="0 0 17 15">
+                                <image id="t" width="17" height="15" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAAPCAYAAAACsSQRAAAAAXNSR0IArs4c6QAAATdJREFUOBGVkr1OAkEUhXeQaCCEChpiQkKLlbWV2NOZWFjYaUPBI/gIhIaEwsLC8AAkUpsQCivDA2A00ZiIlT/hZ/2O2ZXddVbgJN/MnXvvnp3ZHcd13S0wzj+iXoAbmMEnXEAG8rDnMNShDxs2H/JFeIeoxiTmcCKTK686ZM5Gjcj1vLpt0s6uZdIMVD+Ia5D0zYi1/ThpN2WZlCwdX+RuoQ3acpxO9TK9sQoPsA2+Ngl2PfycbX5WMgFFCBoov6ru1WjYZ555BCkl1tCU3rQxZpJgeGFRgbc1DNQ6kIECHUeawZ/f+1OJHy5DJY6kY+merKonGtMhEy1I5qABtttJOqTDoEGS0gGJEuzAESz7wOd8iw59C2GiC6WbukyvNBwvnoxEFPehBXcwAV+PBF04g0zksd/lN9T8wcJuG1NNAAAAAElFTkSuQmCC"/>
+                            </svg>                              
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social-button" href="#">
+                            <span class="visually-hidden">Facebook</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="12" height="22" viewBox="0 0 12 22">
+                                <image id="fb-icon" width="12" height="22" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAwAAAAWCAYAAAD0OH0aAAAAAXNSR0IArs4c6QAAAHtJREFUOBFjYMAC/v//bwDEO4H4FxCjAAzlQFmQ4m8oqpA42DSATMYJGNF1AFX+AoqxoovD+CgagIpB/H8wSSitAKQ/ookhuFjcIoCQZWBgQuYQwyZZAyPICcSYDFNDsg2018ACdJsgzH1Q+j0aXwHIH8zxQPtQGg42AABkeo6eBwyY1QAAAABJRU5ErkJggg=="/>
+                            </svg>                              
+                        </a>
+                    </li>
+                    <li>
+                        <a class="social-button" href="#">
+                            <span class="visually-hidden">Youtube</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="16" viewBox="0 0 20 16">
+                                <image id="youtube" width="20" height="16" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAQCAYAAAAWGF8bAAAAAXNSR0IArs4c6QAAAN5JREFUOBG1lDEKwjAUQBMV3FwEh25Ourl6BtELOHoSd72Dl/AQilM3paAncHMRsfH9YqFDTL8SA69tfv5/SUqIcc4lkMIDfm1Se4DE8jgbY/oQo11E+MTUiGHDkYvQRZIVmtDKlmTsv50sJEyttWOEQ9hCrpGHhEU90hPM6PRgA/di4MOjVljWIb3Cgn4HVnArx6pvtbBa9P5uemKm5Qv6YhyGLnFZ2RzavhyJ1QoRDchbwwRqdxRKGCHbITnCVCMjx/zlYKvOl8yuaLlsOVMkalMyw3+S60uunijX1wv9+seOOwYP8QAAAABJRU5ErkJggg=="/>
+                            </svg>                              
+                        </a>
+                    </li>
                 </ul>
             </div>
             <div class="footer-copyright">
-                <p>Website by</p>
-                <a class="copyright-logo" href="https://htmlacademy.ru">HTML Academy</a>
+                <span>Website by</span>
+                <a class="copyright-logo" href="https://htmlacademy.ru"><span class="visually-hidden">HTML Academy</span></a>
             </div>
         </footer>
+        <script src="js/index.js"></script>
     </body>
 </html>
